@@ -1,13 +1,13 @@
 // TEA encryption.cpp : Defines the entry point for the console application.
 //
-#include "../../../std_lib_facilities.h"
+#include "std_lib_facilities.h"
 #include <windows.h>
 void encipher(
 	const unsigned long *const v,
 	unsigned long *const w,
 	const unsigned long * const k, int iterations = 32)
 {
-	static_assert(sizeof(long) == 4, "Rat tiec, ko the encrypt bay gio");
+	static_assert(sizeof(long) == 4, "size ò long wrong for TEA");
 	unsigned long y = v[0];
 	unsigned long z = v[1];
 	unsigned long sum = 0;
